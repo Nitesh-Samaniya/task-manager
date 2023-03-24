@@ -1,10 +1,12 @@
-
+import AllRoutes from './allRoutes/AllRoutes';
+import Navbar from './components/Navbar/Navbar';
 
 function App() {
   return (
-    <div className="App">
-      react app
-    </div>
+    <>
+      <Navbar />
+      <AllRoutes />
+    </>
   );
 }
 
