@@ -5,7 +5,7 @@ const Logout = () => {
     const toast = useToast()
 
     const handleClick = ()=>{
-      if(!localStorage.getItem("token")){
+      if(!localStorage.getItem("taskManagerToken")){
         toast({
           title: 'Login First.',
           description: "To Logout, You Need To Login First",
@@ -25,7 +25,7 @@ const Logout = () => {
         }) 
       }
 
-        localStorage.removeItem("token");
+        localStorage.removeItem("taskManagerToken");
 
           
     }

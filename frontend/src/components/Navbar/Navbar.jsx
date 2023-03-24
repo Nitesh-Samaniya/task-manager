@@ -4,7 +4,8 @@ import { Link } from 'react-router-dom'
 import Account from '../Drawer/Account'
 
 const Navbar = () => {
-  const [userName, setUserName] = useState("")
+  const token = JSON.parse(localStorage.getItem("taskManagerToken")) || ""; 
+  const [userName, setUserName] = useState(token.user)
 
   return (
     <Box 
