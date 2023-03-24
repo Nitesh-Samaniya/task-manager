@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Input, InputGroup, InputRightElement } from '@chakra-ui/react'
 import axios from "axios"
-import { Navigate } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom';
 
 const initState = {
     email: "",
@@ -11,6 +11,7 @@ const initState = {
 const Login = () => {
     const [formData, setFormData] = useState(initState);
     const [show, setShow] = React.useState(false)
+    const navigate = useNavigate();
 
     const handleClick = () => setShow(!show)
 
@@ -48,7 +49,7 @@ const Login = () => {
             password: ""
           });
 
-          return <Navigate to="/"/>
+          return navigate("/option")
     
     }
 

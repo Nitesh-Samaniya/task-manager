@@ -1,11 +1,12 @@
 import React, { useState } from 'react'
 import { Box } from '@chakra-ui/react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Account from '../Drawer/Account'
 
 const Navbar = () => {
   const token = JSON.parse(localStorage.getItem("taskManagerToken")) || ""; 
   const [userName, setUserName] = useState(token.user)
+  const navigate = useNavigate();
 
   return (
     <Box 
@@ -22,16 +23,20 @@ const Navbar = () => {
         fontSize={'25px'}
         position={'fixed'}
         zIndex={5}
+        top={0}
     >
         <Box><Link to="/">Task Manager</Link></Box>
 
         <Box 
           cursor={'pointer'}
+          onClick={()=>navigate("/option")}
         >
           {userName? "Create Task": ""}
         </Box>
 
-        <Box><Account /></Box>
+        <Box>
+          <Account />
+        </Box>
     </Box>
   )
 }
