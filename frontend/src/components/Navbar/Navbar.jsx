@@ -8,6 +8,7 @@ const Navbar = () => {
 
   return (
     <Box 
+        w={'100%'}
         bg={'#89C4E1'}
         pt={'1%'}
         pb={'1%'}
@@ -18,6 +19,8 @@ const Navbar = () => {
         justifyContent = {'space-between'}
         fontFamily={'cursive'}
         fontSize={'25px'}
+        position={'fixed'}
+        zIndex={5}
     >
         <Box><Link to="/">Task Manager</Link></Box>
 

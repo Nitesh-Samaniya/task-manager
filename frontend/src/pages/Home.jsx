@@ -9,7 +9,7 @@ const Home = () => {
             src={HomeImg}
             alt={'home-img'}
             w={'100%'}
-            h={'90vh'}
+            // h={'90vh'}
         />
     </Box>
   )
