@@ -9,7 +9,7 @@ const Option = () => {
   return (
     <Box textAlign={'center'} mt={'200px'}>
 
-        <Button display={'inline-block'} size='lg'>
+        <Button display={'inline-block'} size='lg' onClick={()=>navigate("/seeTask")}>
             <ViewIcon boxSize={5} /> See All Tasks
         </Button>
 
