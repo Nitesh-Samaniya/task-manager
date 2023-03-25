@@ -2,8 +2,6 @@ require('dotenv').config();
 const express = require("express");
 const UserModel = require("../models/user.model");
 const argon2 = require("argon2");
-const jwt = require("jsonwebtoken");
-
 
 const app = express.Router();
 
@@ -33,7 +31,6 @@ app.post("/signup", async (req,res)=> {
 
 app.post("/login", async(req,res)=> {
     const {email, password} = req.body;
-
     const user = await UserModel.findOne({email});
     if(await argon2.verify(user.password, password)){
 
