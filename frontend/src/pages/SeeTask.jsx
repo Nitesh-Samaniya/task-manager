@@ -6,9 +6,9 @@ const SeeTask = () => {
     const [data, setData] = useState([]);
 
     useEffect(()=>{
-        axios.get("http://localhost:8080/task")
+        axios.get("https://taskmanager-uu9s.onrender.com/task")
         .then((res)=>{
-            console.log(res.data)
+            console.log("check")
             setData(res.data)
         })
         .catch((e)=>{

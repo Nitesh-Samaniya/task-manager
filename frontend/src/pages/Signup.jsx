@@ -27,7 +27,7 @@ const Signup = () => {
         e.preventDefault();
 
         await axios({
-            url: "http://localhost:8080/user/signup",
+            url: "https://taskmanager-uu9s.onrender.com/user/signup",
             method: "POST",
             headers: {
               "Accept": "application/json",
